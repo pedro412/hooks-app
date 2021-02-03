@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from './UserContext';
 
 export const AboutPage = () => {
+  const { user, setUser } = useContext(UserContext);
   return (
     <div>
       <h1>About Page</h1>
       <hr />
+      <pre>{JSON.stringify(user, null, 3)}</pre>
+      <button className="btn btn-danger" onClick={() => setUser({})}>
+        Logout
+      </button>
     </div>
   );
 };

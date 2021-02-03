@@ -12,10 +12,10 @@ import { Navbar } from './Navbar';
 
 export const AppRouter = () => {
   return (
-    <div>
-      <Router>
-        <div>
-          <Navbar />
+    <Router>
+      <div>
+        <Navbar />
+        <div className="container">
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/about" component={AboutPage} />
@@ -23,7 +23,7 @@ export const AppRouter = () => {
             <Redirect to="/" />
           </Switch>
         </div>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 };
